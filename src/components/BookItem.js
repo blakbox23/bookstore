@@ -1,6 +1,12 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
 function BookItem() {
+  const dispatch = useDispatch();
+
+  const removeBookFromStore = () => dispatch(removeBook());
+
   return (
     <div className="book-item">
       <div className="item-left">
@@ -9,7 +15,9 @@ function BookItem() {
         <p>author</p>
         <ul className="crud-links">
           <li>comments</li>
-          <li>Remove</li>
+          <li>
+            <button onClick={removeBookFromStore} type="button"> Remove </button>
+          </li>
           <li>Edit</li>
         </ul>
 
