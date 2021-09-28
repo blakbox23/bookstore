@@ -1,5 +1,5 @@
 
-# React Todo List
+# Bookstore CMS
 
 This is an ongoing bookstore project created with react and redux. It will allow users to add new books, remove finished books, and track progress.
 
