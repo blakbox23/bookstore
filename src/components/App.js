@@ -5,21 +5,20 @@ import BookList from './BookList';
 import NewBook from './NewBook';
 import Categories from '../pages/Categories';
 
-
 function App() {
   return (
     <>
-  <Nav />
-  <Switch>
+      <Nav />
+      <Switch>
         <Route exact path="/">
-  <BookList />
-  <NewBook />
-  </Route>
-  <Route path="/categories">
+          <BookList />
+          <NewBook />
+        </Route>
+        <Route path="/categories">
           <Categories />
         </Route>
-  </Switch>
-  </>
+      </Switch>
+    </>
   );
 }
 
