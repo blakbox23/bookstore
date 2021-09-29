@@ -13,6 +13,32 @@ export const removeBook = (payload) => ({
   payload,
 });
 
+export const postBook = (payload) => async (dispatch) => {
+  await fetch(
+    'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BhqzrQ20oG4ih4qjaX67/books', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+      },
+      body: JSON.stringify(payload),
+    },
+  );
+  dispatch({ type: ADD_BOOK, payload });
+
+  // } else {
+  //   await fetch(
+  //     `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BhqzrQ20oG4ih4qjaX67/books/${payload}`, {
+  //       method: 'DELETE',
+  //       headers: {
+  //         'Content-Type': 'application/json;charset=UTF-8',
+  //       },
+  //       body: JSON.stringify(payload),
+  //     },
+  //   );
+  //   dispatch({ type: REMOVE_BOOK, payload });
+  // }
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
@@ -21,7 +47,7 @@ const reducer = (state = initialState, action) => {
 
     case REMOVE_BOOK:
 
-      return state.filter((book) => book.id !== action.payload.id);
+      return state.filter((book) => book.id !== action.payload.item_id);
 
     default:
       return state;
