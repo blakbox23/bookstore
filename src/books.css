@@ -6,7 +6,6 @@
   padding: 0;
 }
 
-
 .panel-bg {
   display: flex;
   height: 5.938rem;
@@ -19,7 +18,7 @@
 .bookstore-CMS {
   width: 18rem;
   height: 2.313rem;
-  font-family: Montserrat;
+  font-family: 'Montserrat', serif;
   font-size: 1.875rem;
   font-weight: bold;
   color: #0290ff;
@@ -29,20 +28,19 @@
 .links {
   display: flex;
   list-style: none;
-
 }
 
 .link-item {
   margin: 2rem;
-  font-family: Montserrat;
+  font-family: 'Montserrat', serif;
 }
 
-.act-link{
+.act-link {
   color: #8a8888;
   text-decoration: none;
 }
 
-.active-link{
+.active-link {
   color: rgb(43, 36, 82);
 }
 
@@ -59,7 +57,6 @@
   background-color: #fff;
   padding: 20px;
   border: 1px solid black;
-
 }
 
 .item-left {
@@ -76,7 +73,7 @@
 
 .cat-text {
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: 'Montserrat', serif;
   font-size: 0.85rem;
   font-weight: bold;
   margin-bottom: 15px;
@@ -84,7 +81,7 @@
 }
 
 .auth-text {
-  font-family: 'RobotoSlab';
+  font-family: 'RobotoSlab', serif;
 }
 
 .crud-links {
@@ -124,7 +121,7 @@
   width: 50%;
   display: flex;
   align-self: center;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', serif;
 }
 
 .percentage {
@@ -134,18 +131,19 @@
 
 .prog-display {
   width: 50%;
+
   /* border: 1px solid black; */
 }
 
 .curr-chap {
-  font-family: 'RobotoSlab';
+  font-family: 'RobotoSlab', serif;
   font-size: 0.78rem;
   color: #121212;
   opacity: 0.5;
 }
 
 .chap-num {
-  font-family: 'RobotoSlab';
+  font-family: 'RobotoSlab', serif;
   font-size: 1rem;
   letter-spacing: -0.4px;
   margin-top: 0.5rem;
@@ -185,6 +183,7 @@
 .input-title {
   width: 41rem;
 }
+
 .input-category {
   width: 15rem;
 }
@@ -197,4 +196,3 @@
   border: none;
   color: #fff;
 }
-
