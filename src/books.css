@@ -11,7 +11,7 @@
   display: flex;
   height: 5.938rem;
   align-items: center;
-  border: 1px solid black;
+  border-bottom: 1px solid #c2b5b5;
   padding-left: 3rem;
   background-color: #fff;
 }
@@ -51,7 +51,6 @@
   width: 90%;
   margin: auto;
   padding: 1rem;
-  border: 1px solid black;
 }
 
 .book-item {
@@ -64,7 +63,6 @@
 }
 
 .item-left {
-  /* border: 1px solid black; */
   width: 50%;
 }
 
@@ -141,7 +139,7 @@
 
 .curr-chap {
   font-family: 'RobotoSlab';
-  font-size: 0.9rem;
+  font-size: 0.78rem;
   color: #121212;
   opacity: 0.5;
 }
@@ -163,20 +161,40 @@
   color: #fff;
   font-size: 0.7rem;
   border: none;
+  cursor: pointer;
 }
 
 .new-book {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgb(204, 181, 181);
+  padding-left: 3rem;
+}
+
+.new-book form {
+  margin-top: 1rem;
 }
 
 .input-title,
 .input-author,
 .input-category,
 .input-submit {
-  height: 1.5rem;
+  height: 2rem;
   margin-right: 1rem;
 }
 
 .input-title {
-  width: 26rem;
+  width: 41rem;
 }
+.input-category {
+  width: 15rem;
+}
+
+.input-submit {
+  width: 11.5rem;
+  height: 2rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  color: #fff;
+}
+

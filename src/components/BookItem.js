@@ -34,7 +34,7 @@ const BookItem = ({ book }) => {
           </div>
         </div>
         <div className="prog-display">
-          <p className="curr-chap">current chapter</p>
+          <p className="curr-chap">CURRENT CHAPTER</p>
           <p className="chap-num">Chapter 17</p>
           <button className="update-prog" type="button">UPDATE PROGRESS</button>
         </div>
