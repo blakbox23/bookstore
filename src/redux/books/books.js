@@ -4,30 +4,39 @@ const GET_BOOK = 'bookStore/books/GET_BOOK';
 
 const initialState = [];
 
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
+export const removeBook = (payload) => ({
+  type: REMOVE_BOOK,
   payload,
 });
 
-export const removeBook = (payload) => ({
-  type: REMOVE_BOOK,
+export const retrieveBooks = (payload) => ({
+  type: GET_BOOK,
   payload,
 });
 
 export const getBooks = () => async () => {
   const data = await fetch(
     'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BhqzrQ20oG4ih4qjaX67/books',
-  )
-    .then((response) => response.json);
-  const formattedData = [0];
-  Object.keys(data).forEach((key) => {
-    formattedData.push({
-      item_id: key,
-      title: data[key][0].title,
-      category: data[key][0].category,
-    });
-  });
-  console.log(`====== ${formattedData} =======`);
+    { method: 'GET' },
+  );
+  const newData = await data.json();
+  // console.log(`====== ${data} =======`);
+
+  // const formattedData = [{
+  //   item_id: 'key',
+  //   title: 'data[key][0].title',
+  //   category: 'data[key][0].category',
+  // }];
+  // Object.keys(data).forEach((key) => {
+  //   console.log(`====== ${key} =======`);
+
+  //   formattedData.push({
+  //     item_id: key,
+  //     title: data[key][0].title,
+  //     category: data[key][0].category,
+  //   });
+  // });
+  console.log(`===s=== ${newData} =======`);
 
   // dispatch({ type: GET_BOOK, formattedData });
 };
@@ -61,14 +70,12 @@ export const postBook = (payload, method) => async (dispatch) => {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-
       return [...state, action.payload];
-    case GET_BOOK:
 
+    case GET_BOOK:
       return action.payload;
 
     case REMOVE_BOOK:
-
       return state.filter((book) => book.item_id !== action.payload);
 
     default:
