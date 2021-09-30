@@ -16,9 +16,9 @@ function Nav() {
     },
   ];
   return (
-    <div className="panel-bg">
+    <div className="panel-bg flex">
       <div className="bookstore-CMS Text-Style-5">Bookstore CMS</div>
-      <ul className="links">
+      <ul className="links flex">
         {links.map((link) => (
           <li key={link.id} className="link-item">
             <NavLink to={link.path} className="act-link" activeClassName="active-link" exact>{link.text}</NavLink>

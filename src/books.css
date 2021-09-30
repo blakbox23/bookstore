@@ -6,8 +6,11 @@
   padding: 0;
 }
 
-.panel-bg {
+.flex {
   display: flex;
+}
+
+.panel-bg {
   height: 5.938rem;
   align-items: center;
   border-bottom: 1px solid #c2b5b5;
@@ -26,7 +29,6 @@
 }
 
 .links {
-  display: flex;
   list-style: none;
 }
 
@@ -52,7 +54,6 @@
 }
 
 .book-item {
-  display: flex;
   margin: 0.7rem;
   background-color: #fff;
   padding: 20px;
@@ -85,7 +86,6 @@
 }
 
 .crud-links {
-  display: flex;
   list-style: none;
 }
 
@@ -103,7 +103,6 @@
 }
 
 .item-right {
-  display: flex;
   width: 50%;
 }
 
@@ -119,7 +118,6 @@
 
 .complt-display {
   width: 50%;
-  display: flex;
   align-self: center;
   font-family: 'Montserrat', serif;
 }

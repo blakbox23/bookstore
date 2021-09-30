@@ -9,24 +9,22 @@ const BookItem = ({ book }) => {
   const removeBookFromStore = (book) => dispatch(postBook(book, 'DELETE'));
 
   return (
-    <div className="book-item">
+    <div className="book-item flex">
       <div className="item-left">
         <p className="cat-text">{book.category}</p>
         <p className="tit-text">{book.title}</p>
         <p className="auth-text">{book.author}</p>
-        <ul className="crud-links">
-          {/* <li>comments</li> */}
+        <ul className="crud-links flex">
           <li>
             <button onClick={() => removeBookFromStore(book)} className="remove-btn" type="button"> Remove </button>
           </li>
-          {/* <li>Edit</li> */}
         </ul>
 
       </div>
 
-      <div className="item-right">
+      <div className="item-right flex">
 
-        <div className="complt-display">
+        <div className="complt-display flex">
           <div className="Oval-2" />
           <div>
             <span className="percentage">64%</span>
