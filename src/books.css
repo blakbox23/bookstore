@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
+
 
 .panel-bg {
   display: flex;
@@ -9,15 +13,37 @@
   align-items: center;
   border: 1px solid black;
   padding-left: 3rem;
+  background-color: #fff;
+}
+
+.bookstore-CMS {
+  width: 18rem;
+  height: 2.313rem;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0290ff;
+  letter-spacing: -1.5px;
 }
 
 .links {
   display: flex;
   list-style: none;
+
 }
 
 .link-item {
   margin: 2rem;
+  font-family: Montserrat;
+}
+
+.act-link{
+  color: #8a8888;
+  text-decoration: none;
+}
+
+.active-link{
+  color: rgb(43, 36, 82);
 }
 
 .book-list,
@@ -25,17 +51,41 @@
   width: 90%;
   margin: auto;
   padding: 1rem;
+  border: 1px solid black;
 }
 
 .book-item {
-  border: 1px solid black;
   display: flex;
   margin: 0.7rem;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid black;
+
 }
 
 .item-left {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 50%;
+}
+
+.tit-text {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: -0.2px;
+  color: #121212;
+  margin-bottom: 15px;
+
+}
+
+.cat-text {
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.auth-text {
+  font-family: 'RobotoSlab';
 }
 
 .crud-links {

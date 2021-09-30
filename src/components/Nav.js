@@ -7,21 +7,21 @@ function Nav() {
     {
       id: 1,
       path: '/',
-      text: 'Books',
+      text: 'BOOKS',
     },
     {
       id: 2,
       path: '/categories',
-      text: 'Categories',
+      text: 'CATEGORIES',
     },
   ];
   return (
     <div className="panel-bg">
-      <div className="Bookstore-CMS Text-Style-5">Bookstore CMS</div>
+      <div className="bookstore-CMS Text-Style-5">Bookstore CMS</div>
       <ul className="links">
         {links.map((link) => (
           <li key={link.id} className="link-item">
-            <NavLink to={link.path} activeClassName="active-link" exact>{link.text}</NavLink>
+            <NavLink to={link.path} className="act-link" activeClassName="active-link" exact>{link.text}</NavLink>
           </li>
         ))}
       </ul>
