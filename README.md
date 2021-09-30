@@ -3,7 +3,7 @@
 
 This is a React and Redux project that allows users to add and remove books from the Bookstore. It fetches data from the [Bookstore API](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739) which allows for adding and deleting of books as well. The adding and monitoring progress part is soon to be added.
 
- ![screenshot](./src/assets/Capture.png)
+ ![Capture](./src/assets/Capture.PNG)
 
 
 
