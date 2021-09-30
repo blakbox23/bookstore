@@ -13,7 +13,7 @@ const BookItem = ({ book }) => {
       <div className="item-left">
         <p>{book.category}</p>
         <p>{book.title}</p>
-        <p>author</p>
+        <p>{book.author}</p>
         <ul className="crud-links">
           <li>comments</li>
           <li>
@@ -43,6 +43,7 @@ BookItem.propTypes = {
   book: PropTypes.shape({
     item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   }).isRequired,
 };

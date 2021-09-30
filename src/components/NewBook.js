@@ -11,6 +11,7 @@ function NewBook() {
     const newbook = {
       item_id: uuidv4(),
       title: e.target.title.value,
+      author: e.target.author.value,
       category: e.target.category.value,
     };
 
@@ -31,16 +32,16 @@ function NewBook() {
         />
         <input
           type="text"
-          className="input-category"
-          placeholder="category"
-          name="category"
+          className="input-author"
+          placeholder="Author"
+          name="author"
         />
-        {/* <input
+        <input
           type="text"
           className="input-category"
           placeholder="Category"
           name="category"
-        /> */}
+        />
         <input type="submit" className="input-submit" value="Add book" />
       </form>
     </div>
