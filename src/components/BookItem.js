@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { postBook } from '../redux/books/books';
+import { postBook } from '../redux/api';
 
 const BookItem = ({ book }) => {
   const dispatch = useDispatch();

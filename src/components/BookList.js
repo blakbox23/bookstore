@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import BookItem from './BookItem';
-import { getBooks } from '../redux/books/books';
+import { getBooks } from '../redux/api';
 
 const BookList = () => {
   const books = useSelector((state) => state.booksState);
