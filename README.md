@@ -1,12 +1,19 @@
 
 # Bookstore CMS
 
-This is an ongoing bookstore project created with react and redux. It will allow users to add new books, remove finished books, and track progress.
+This is a React and Redux project that allows users to add and remove books from the Bookstore. It fetches data from the [Bookstore API](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739) which allows for adding and deleting of books as well. The adding and monitoring progress part is soon to be added.
+
+ ![Capture](./src/assets/Capture.PNG)
+
+
 
 
 ## Built With
 
 - React
+- Redux
+- [Bookstore API](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739)
+
 
 
 ## Getting Started

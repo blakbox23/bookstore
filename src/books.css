@@ -1,23 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 
-.panel-bg {
+.flex {
   display: flex;
+}
+
+.panel-bg {
   height: 5.938rem;
   align-items: center;
-  border: 1px solid black;
+  border-bottom: 1px solid #c2b5b5;
   padding-left: 3rem;
+  background-color: #fff;
+}
+
+.bookstore-CMS {
+  width: 18rem;
+  height: 2.313rem;
+  font-family: 'Montserrat', serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0290ff;
+  letter-spacing: -1.5px;
 }
 
 .links {
-  display: flex;
   list-style: none;
 }
 
 .link-item {
   margin: 2rem;
+  font-family: 'Montserrat', serif;
+}
+
+.act-link {
+  color: #8a8888;
+  text-decoration: none;
+}
+
+.active-link {
+  color: rgb(43, 36, 82);
 }
 
 .book-list,
@@ -28,18 +54,38 @@
 }
 
 .book-item {
-  border: 1px solid black;
-  display: flex;
   margin: 0.7rem;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid black;
 }
 
 .item-left {
-  border: 1px solid black;
   width: 50%;
 }
 
+.tit-text {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: -0.2px;
+  color: #121212;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.cat-text {
+  opacity: 0.5;
+  font-family: 'Montserrat', serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.auth-text {
+  font-family: 'RobotoSlab', serif;
+}
+
 .crud-links {
-  display: flex;
   list-style: none;
 }
 
@@ -47,33 +93,104 @@
   margin-right: 1rem;
 }
 
+.remove-btn {
+  background-color: #fff;
+  border: none;
+  color: rgb(35, 35, 129);
+  border-right: 1.5px solid rgb(197, 197, 197);
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+
 .item-right {
-  display: flex;
   width: 50%;
+}
+
+.Oval-2 {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 5px solid #307bbe;
+  border-top-color: rgb(238, 207, 207);
+  border-right-color: rgb(238, 207, 207);
+  margin-right: 2rem;
 }
 
 .complt-display {
   width: 50%;
-  border: 1px solid black;
+  align-self: center;
+  font-family: 'Montserrat', serif;
+}
+
+.percentage {
+  font-size: 1.8rem;
+  display: block;
 }
 
 .prog-display {
   width: 50%;
-  border: 1px solid black;
+
+  /* border: 1px solid black; */
+}
+
+.curr-chap {
+  font-family: 'RobotoSlab', serif;
+  font-size: 0.78rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.chap-num {
+  font-family: 'RobotoSlab', serif;
+  font-size: 1rem;
+  letter-spacing: -0.4px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.update-prog {
+  width: 11.5rem;
+  height: 2.063rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
+  font-size: 0.7rem;
+  border: none;
+  cursor: pointer;
 }
 
 .new-book {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgb(204, 181, 181);
+  padding-left: 3rem;
+}
+
+.new-book form {
+  margin-top: 1rem;
 }
 
 .input-title,
 .input-author,
 .input-category,
 .input-submit {
-  height: 1.5rem;
+  height: 2rem;
   margin-right: 1rem;
 }
 
 .input-title {
-  width: 26rem;
+  width: 41rem;
+}
+
+.input-category {
+  width: 15rem;
+}
+
+.input-submit {
+  width: 11.5rem;
+  height: 2rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  color: #fff;
 }

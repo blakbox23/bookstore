@@ -13,7 +13,6 @@ export const getBooks = () => async (dispatch) => {
       item_id: key,
       title: newData[key][0].title,
       category: newData[key][0].category,
-      author: newData[key][0].author || 'Anonymous',
     });
   });
   dispatch({ type: GET_BOOK, formattedData });
