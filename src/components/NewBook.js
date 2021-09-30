@@ -14,7 +14,7 @@ function NewBook() {
       category: e.target.category.value,
     };
 
-    dispatch(postBook(newbook));
+    dispatch(postBook(newbook, 'POST'));
 
     e.target.title.value = '';
     e.target.category.value = '';
