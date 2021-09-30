@@ -1,23 +1,26 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { postBook } from '../redux/api';
 
 function NewBook() {
   const dispatch = useDispatch();
 
   const submitBookToStore = (e) => {
     e.preventDefault();
-    const newBook = {
-      id: uuidv4(),
+
+    const newbook = {
+      item_id: uuidv4(),
       title: e.target.title.value,
       author: e.target.author.value,
+      category: e.target.category.value,
     };
 
-    dispatch(addBook(newBook));
+    dispatch(postBook(newbook, 'POST'));
 
     e.target.title.value = '';
     e.target.author.value = '';
+    e.target.category.value = '';
   };
   return (
     <div className="new-book">
@@ -31,16 +34,16 @@ function NewBook() {
         />
         <input
           type="text"
-          className="input-category"
+          className="input-author"
           placeholder="Author"
           name="author"
         />
-        {/* <input
+        <input
           type="text"
           className="input-category"
           placeholder="Category"
           name="category"
-        /> */}
+        />
         <input type="submit" className="input-submit" value="Add book" />
       </form>
     </div>

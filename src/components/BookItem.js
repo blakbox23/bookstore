@@ -1,22 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { postBook } from '../redux/api';
 
-function BookItem() {
+const BookItem = ({ book }) => {
   const dispatch = useDispatch();
 
-  const removeBookFromStore = () => dispatch(removeBook());
+  const removeBookFromStore = (book) => dispatch(postBook(book, 'DELETE'));
 
   return (
     <div className="book-item">
       <div className="item-left">
-        <p>categories</p>
-        <p>TITLE</p>
-        <p>author</p>
+        <p className="cat-text">{book.category}</p>
+        <p className="tit-text">{book.title}</p>
+        <p className="auth-text">{book.author}</p>
         <ul className="crud-links">
           <li>comments</li>
           <li>
-            <button onClick={removeBookFromStore} type="button"> Remove </button>
+            <button onClick={() => removeBookFromStore(book)} type="button"> Remove </button>
           </li>
           <li>Edit</li>
         </ul>
@@ -36,6 +37,15 @@ function BookItem() {
       </div>
     </div>
   );
-}
+};
+
+BookItem.propTypes = {
+  book: PropTypes.shape({
+    item_id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default BookItem;
