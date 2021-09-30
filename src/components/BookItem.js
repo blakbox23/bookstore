@@ -27,11 +27,16 @@ const BookItem = ({ book }) => {
       <div className="item-right">
 
         <div className="complt-display">
-          64% completed
+          <div className="Oval-2" />
+          <div>
+            <span className="percentage">64%</span>
+            completed
+          </div>
         </div>
         <div className="prog-display">
-          <p>current chapter</p>
-          <p>chapter 17</p>
+          <p className="curr-chap">current chapter</p>
+          <p className="chap-num">Chapter 17</p>
+          <button className="update-prog" type="button">UPDATE PROGRESS</button>
         </div>
 
       </div>
