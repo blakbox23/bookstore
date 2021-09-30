@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { postBook } from '../redux/books/books';
 
 const BookItem = ({ book }) => {
   const dispatch = useDispatch();
 
-  const removeBookFromStore = (id) => dispatch(removeBook(id));
+  const removeBookFromStore = (book) => dispatch(postBook(book, 'DELETE'));
 
   return (
     <div className="book-item">
@@ -17,7 +17,7 @@ const BookItem = ({ book }) => {
         <ul className="crud-links">
           <li>comments</li>
           <li>
-            <button onClick={() => removeBookFromStore(book.item_id)} type="button"> Remove </button>
+            <button onClick={() => removeBookFromStore(book)} type="button"> Remove </button>
           </li>
           <li>Edit</li>
         </ul>

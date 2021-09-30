@@ -14,31 +14,41 @@ export const retrieveBooks = (payload) => ({
   payload,
 });
 
-export const getBooks = () => async () => {
+// export const getBooks = () => async () => {
+//   const data = await fetch(
+//     'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BhqzrQ20oG4ih4qjaX67/books',
+//     { method: 'GET' },
+//   );
+//   const newData = await data.json();
+//   // console.log(`====== ${data} =======`);
+
+//   // const formattedData = [{
+//   //   item_id: 'key',
+//   //   title: 'data[key][0].title',
+//   //   category: 'data[key][0].category',
+//   // }];
+//   // Object.keys(data).forEach((key) => {
+//   //   console.log(`====== ${key} =======`);
+
+//   //   formattedData.push({
+//   //     item_id: key,
+//   //     title: data[key][0].title,
+//   //     category: data[key][0].category,
+//   //   });
+//   // });
+export const getBooks = () => async (dispatch) => {
   const data = await fetch(
     'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BhqzrQ20oG4ih4qjaX67/books',
     { method: 'GET' },
   );
   const newData = await data.json();
-  // console.log(`====== ${data} =======`);
 
-  // const formattedData = [{
-  //   item_id: 'key',
-  //   title: 'data[key][0].title',
-  //   category: 'data[key][0].category',
-  // }];
-  // Object.keys(data).forEach((key) => {
-  //   console.log(`====== ${key} =======`);
-
-  //   formattedData.push({
-  //     item_id: key,
-  //     title: data[key][0].title,
-  //     category: data[key][0].category,
-  //   });
-  // });
-  console.log(`===s=== ${newData} =======`);
-
-  // dispatch({ type: GET_BOOK, formattedData });
+  const formattedData = [];
+  Object.entries(newData).forEach(
+    // eslint-disable-next-line
+    ([item_id, value]) => formattedData.push({ item_id, ...value[0] }),
+  );
+  dispatch({ type: GET_BOOK, formattedData });
 };
 
 export const postBook = (payload, method) => async (dispatch) => {
@@ -55,12 +65,12 @@ export const postBook = (payload, method) => async (dispatch) => {
     dispatch({ type: ADD_BOOK, payload });
   } else {
     await fetch(
-      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BhqzrQ20oG4ih4qjaX67/books/${payload}`, {
+      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BhqzrQ20oG4ih4qjaX67/books/${payload.item_id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json;charset=UTF-8',
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ item_id: payload.item_id }),
       },
     );
     dispatch({ type: REMOVE_BOOK, payload });
@@ -73,10 +83,10 @@ const reducer = (state = initialState, action) => {
       return [...state, action.payload];
 
     case GET_BOOK:
-      return action.payload;
+      return action.formattedData;
 
     case REMOVE_BOOK:
-      return state.filter((book) => book.item_id !== action.payload);
+      return state.filter((book) => book.item_id !== action.payload.item_id);
 
     default:
       return state;
