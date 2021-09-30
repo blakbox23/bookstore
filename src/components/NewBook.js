@@ -8,6 +8,7 @@ function NewBook() {
 
   const submitBookToStore = (e) => {
     e.preventDefault();
+
     const newbook = {
       item_id: uuidv4(),
       title: e.target.title.value,
@@ -18,6 +19,7 @@ function NewBook() {
     dispatch(postBook(newbook, 'POST'));
 
     e.target.title.value = '';
+    e.target.author.value = '';
     e.target.category.value = '';
   };
   return (

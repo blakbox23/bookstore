@@ -11,9 +11,9 @@ const BookItem = ({ book }) => {
   return (
     <div className="book-item">
       <div className="item-left">
-        <p>{book.category}</p>
-        <p>{book.title}</p>
-        <p>{book.author}</p>
+        <p className="cat-text">{book.category}</p>
+        <p className="tit-text">{book.title}</p>
+        <p className="auth-text">{book.author}</p>
         <ul className="crud-links">
           <li>comments</li>
           <li>
