@@ -12,14 +12,12 @@ function NewBook() {
     const newbook = {
       item_id: uuidv4(),
       title: e.target.title.value,
-      author: e.target.author.value,
       category: e.target.category.value,
     };
 
     dispatch(postBook(newbook, 'POST'));
 
     e.target.title.value = '';
-    e.target.author.value = '';
     e.target.category.value = '';
   };
   return (
@@ -32,12 +30,7 @@ function NewBook() {
           placeholder="Book title"
           name="title"
         />
-        <input
-          type="text"
-          className="input-author"
-          placeholder="Author"
-          name="author"
-        />
+
         <input
           type="text"
           className="input-category"

@@ -73,7 +73,7 @@
   letter-spacing: -0.2px;
   color: #121212;
   margin-bottom: 15px;
-
+  text-transform: capitalize;
 }
 
 .cat-text {
@@ -82,6 +82,7 @@
   font-size: 0.85rem;
   font-weight: bold;
   margin-bottom: 15px;
+  text-transform: capitalize;
 }
 
 .auth-text {
@@ -95,6 +96,15 @@
 
 .crud-links li {
   margin-right: 1rem;
+}
+
+.remove-btn {
+  background-color: #fff;
+  border: none;
+  color: rgb(35, 35, 129);
+  border-right: 1.5px solid rgb(197, 197, 197);
+  padding-right: 0.5rem;
+  cursor: pointer;
 }
 
 .item-right {

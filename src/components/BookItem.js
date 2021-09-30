@@ -15,11 +15,11 @@ const BookItem = ({ book }) => {
         <p className="tit-text">{book.title}</p>
         <p className="auth-text">{book.author}</p>
         <ul className="crud-links">
-          <li>comments</li>
+          {/* <li>comments</li> */}
           <li>
-            <button onClick={() => removeBookFromStore(book)} type="button"> Remove </button>
+            <button onClick={() => removeBookFromStore(book)} className="remove-btn" type="button"> Remove </button>
           </li>
-          <li>Edit</li>
+          {/* <li>Edit</li> */}
         </ul>
 
       </div>
